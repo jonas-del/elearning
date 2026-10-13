@@ -1,0 +1,524 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-area">
+
+        <a href="#" class="easycode-mark">
+            <span class="easy">Easy</span><span class="code">Code</span>
+        </a>
+
+        <nav class="site-links">
+            <a href="#">Home</a>
+            <a href="#">Courses</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <button class="login-trigger">Login</button>
+
+    </header>
+
+    <main>
+
+        <section class="welcome-area">
+
+            <div class="welcome-copy">
+
+                <p class="small-label">LEARN. BUILD. GROW.</p>
+
+                <h1>
+                    Learn to code.<br>
+                    <span>Build your future.</span>
+                </h1>
+
+                <p class="intro-text">
+                    Learn programming through practical courses designed to help
+                    you build real skills and create real projects.
+                </p>
+
+                <div class="course-finder">
+                    <input
+                        type="text"
+                        id="courseSearch"
+                        placeholder="Search for a course..."
+                    >
+
+                    <button id="searchCourse">
+                        Search
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="learning-area">
+
+            <div class="section-tabs">
+
+                <button
+                    class="tab-link active-tab"
+                    data-page="courses-page"
+                >
+                    Featured Courses
+                </button>
+
+                <button
+                    class="tab-link"
+                    data-page="dashboard-page"
+                >
+                    Student Dashboard
+                </button>
+
+                <button
+                    class="tab-link"
+                    data-page="profile-page"
+                >
+                    Profile
+                </button>
+
+            </div>
+
+ 
+            <div id="courses-page" class="tab-page">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="small-label">START LEARNING</p>
+                        <h2>Featured Courses</h2>
+                    </div>
+
+                    <p class="course-count">
+                        3 courses available
+                    </p>
+
+                </div>
+
+
+                <div class="course-list">
+
+                    <article class="course-box">
+
+                        <div class="course-symbol python-symbol">
+                            Py
+                        </div>
+
+                        <div class="course-details">
+
+                            <span class="course-level">
+                                BEGINNER
+                            </span>
+
+                            <h3>
+                                Python
+                            </h3>
+
+                            <p>
+                                Learn the fundamentals of Python and start building
+                                powerful applications from scratch.
+                            </p>
+
+                            <button
+                                class="enroll-btn"
+                                data-course="Python"
+                            >
+                                Enroll Now
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="course-box">
+
+                        <div class="course-symbol java-symbol">
+                            Jv
+                        </div>
+
+                        <div class="course-details">
+
+                            <span class="course-level">
+                                BEGINNER
+                            </span>
+
+                            <h3>
+                                Java
+                            </h3>
+
+                            <p>
+                                Understand object-oriented programming and build
+                                strong foundations with Java.
+                            </p>
+
+                            <button
+                                class="enroll-btn"
+                                data-course="Java"
+                            >
+                                Enroll Now
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="course-box">
+
+                        <div class="course-symbol javascript-symbol">
+                            JS
+                        </div>
+
+                        <div class="course-details">
+
+                            <span class="course-level">
+                                BEGINNER
+                            </span>
+
+                            <h3>
+                                JavaScript
+                            </h3>
+
+                            <p>
+                                Bring websites to life with JavaScript and learn
+                                how modern web applications work.
+                            </p>
+
+                            <button
+                          class="enroll-btn"
+                          data-course="JavaScript"
+                        >
+                          Enroll Now
+                        </button>
+
+                        <button
+                          class="open-course-btn"
+                          data-course="JavaScript"
+                        >
+                          Open Course
+                        </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+ 
+            <div
+                id="dashboard-page"
+                class="tab-page hidden-page"
+            >
+
+                <div class="dashboard-content">
+
+                    <p class="small-label">
+                        YOUR PROGRESS
+                    </p>
+
+                    <h2>
+                        Student Dashboard
+                    </h2>
+
+                    <p class="dashboard-welcome">
+                        Sign in to view your learning progress.
+                    </p>
+
+                    <div
+                        id="enrolledCourses"
+                        class="enrolled-courses"
+                    >
+                    </div>
+
+                </div>
+
+            </div>
+ 
+
+            <div
+                id="profile-page"
+                class="tab-page hidden-page"
+            >
+
+                <div class="profile-content">
+
+                    <div class="profile-avatar">
+                        ?
+                    </div>
+
+                    <div>
+
+                        <p class="small-label">
+                            YOUR ACCOUNT
+                        </p>
+
+                        <h2 id="profileName">
+                            Guest Student
+                        </h2>
+
+                        <p
+                            id="profileEmail"
+                            class="profile-email"
+                        >
+                            Sign in to view your profile.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <button
+                    id="logoutButton"
+                    class="logout-button"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </section>
+        <section
+    id="course-learning-page"
+    class="course-learning-page"
+>
+
+    <button
+        id="backToCourses"
+        class="back-button"
+    >
+        ← Back to Courses
+    </button>
+
+    <div class="course-header">
+
+        <p class="small-label">
+            COURSE
+        </p>
+
+        <h1 id="learningCourseTitle">
+            JavaScript
+        </h1>
+
+        <p>
+            Learn JavaScript from the fundamentals and build real
+            interactive web applications.
+        </p>
+
+    </div>
+
+
+    <div class="learning-layout">
+
+        <aside class="lesson-sidebar">
+
+            <h3>
+                Course Lessons
+            </h3>
+
+            <div
+                id="lessonList"
+                class="lesson-list"
+            >
+
+            </div>
+
+        </aside>
+
+
+        <main class="lesson-content">
+
+            <div class="lesson-top">
+
+                <span
+                    id="lessonNumber"
+                    class="lesson-number"
+                >
+                    Lesson 1
+                </span>
+
+                <span
+                    id="lessonProgress"
+                    class="lesson-progress"
+                >
+                    0% Complete
+                </span>
+
+            </div>
+
+            <h2 id="lessonTitle">
+                Introduction to JavaScript
+            </h2>
+
+            <div
+                id="lessonText"
+                class="lesson-text"
+            >
+
+            </div>
+
+            <button
+                id="completeLesson"
+                class="complete-lesson-button"
+            >
+                Mark Lesson Complete
+            </button>
+
+        </main>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+  
+
+    <div
+        class="auth-overlay"
+        id="authOverlay"
+    >
+
+        <div class="auth-box">
+
+            <button
+                class="close-auth"
+                id="closeAuth"
+            >
+                ×
+            </button>
+
+
+       
+
+            <div
+                class="auth-form"
+                id="loginForm"
+            >
+
+                <p class="small-label">
+                    WELCOME BACK
+                </p>
+
+                <h2>
+                    Sign in to Easy<span>Code</span>
+                </h2>
+
+                <p class="auth-description">
+                    Continue your learning journey.
+                </p>
+
+                <form id="loginFormElement">
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Email address"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+                        Sign In
+                    </button>
+
+                </form>
+
+                <p class="switch-auth">
+                    Don't have an account?
+                    <button id="showSignup">
+                        Create Account
+                    </button>
+                </p>
+
+            </div>
+
+ 
+
+            <div
+                class="auth-form hidden-auth"
+                id="signupForm"
+            >
+
+                <p class="small-label">
+                    JOIN EAS YCODE
+                </p>
+
+                <h2>
+                    Create your account
+                </h2>
+
+                <p class="auth-description">
+                    Start learning and building today.
+                </p>
+
+                <form id="signupFormElement">
+
+                    <input
+                        type="text"
+                        id="signupName"
+                        placeholder="Full name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="Email address"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="Create password"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="auth-submit"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+                <p class="switch-auth">
+                    Already have an account?
+                    <button id="showLogin">
+                        Sign In
+                    </button>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
